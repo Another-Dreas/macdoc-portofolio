@@ -1,0 +1,262 @@
+/* ============================================================
+   PROJECT.CSS - STYLESHEET TAMBAHAN UNTUK HALAMAN PROJEK
+   (Menyempurnakan style.css utama untuk halaman Detail & Arsip)
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. HALAMAN ARSIP PROJEK (Grid 2 Kolom)
+   ------------------------------------------------------------ */
+.projects-archive-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.archive-card {
+    /* Menimpa padding bawaan dari .par-card di style.css */
+    padding: 0 !important; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.archive-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px var(--shadow-color);
+    border-color: var(--primary-color);
+}
+
+.archive-thumb {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    background-color: var(--primary-hover);
+}
+
+.archive-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s ease;
+    /* Mulai dengan grayscale penuh agar senada dengan hero image */
+    filter: grayscale(100%); 
+}
+
+.archive-card:hover .archive-thumb img {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+
+.archive-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.archive-content .par-header {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.archive-content .par-body {
+    /* Mendorong tech-stack ke bawah agar sejajar di setiap kartu */
+    flex: 1; 
+    margin-bottom: 20px;
+}
+
+.archive-content .tech-stack-row {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: none; /* Dihilangkan karena sudah dipisahkan ruang yang cukup */
+}
+
+/* ------------------------------------------------------------
+   2. HALAMAN DETAIL PROJEK / STUDI KASUS
+   ------------------------------------------------------------ */
+.project-hero {
+    min-height: auto !important;
+    padding-top: 150px !important;
+    padding-bottom: 50px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.project-header {
+    max-width: 900px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.project-banner {
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px var(--shadow-color);
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.project-banner img {
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-banner:hover img {
+    transform: scale(1.02);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.project-grid-full {
+    grid-column: 1 / -1;
+}
+
+.detail-icon-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.detail-icon-title i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+/* ------------------------------------------------------------
+   3. RESPONSIVE DESIGN (MOBILE & TABLET)
+   ------------------------------------------------------------ */
+@media (max-width: 992px) {
+    
+    /* Arsip Grid: Berubah dari 2 kolom menjadi 1 kolom bersusun */
+    .projects-archive-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 25px;
+    }
+
+    .archive-thumb {
+        height: 200px; /* Sedikit dipendekkan untuk kenyamanan scroll di HP */
+    }
+    
+    .archive-content {
+        padding: 25px 20px;
+    }
+
+    /* Detail Project Layout */
+    .project-hero {
+        padding-top: 110px !important;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .project-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-navigation {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .project-navigation .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ------------------------------------------------------------
+   4. BENTO PHOTO GALLERY (Untuk Halaman Detail)
+   ------------------------------------------------------------ */
+.bento-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 250px); /* 2 baris, tinggi 250px */
+    gap: 20px;
+    width: 100%;
+}
+
+.gallery-item {
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    position: relative;
+    box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.gallery-item.feature-image {
+    grid-column: 1 / 2; /* Mengambil kolom pertama */
+    grid-row: 1 / 3;    /* Membentang dari baris 1 sampai akhir baris 2 */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s ease;
+    filter: grayscale(100%); /* Tema monokrom elegan */
+}
+
+/* Interaksi Hover: Gambar membesar dan berwarna */
+.gallery-item:hover img {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+
+/* Responsivitas Bento Gallery */
+@media (max-width: 992px) {
+    .bento-gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .gallery-item.feature-image {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        height: 300px; /* Tinggi disesuaikan untuk layar HP */
+    }
+    
+    .gallery-item {
+        height: 200px;
+    }
+}
+
+/* ============================================================
+   FIX: MEMUNCULKAN TEKS JUDUL HERO
+   (Membatalkan opacity:0 bawaan dari style.css utama)
+   ============================================================ */
+.project-header .hero-title {
+    opacity: 1;
+    transform: none;
+}
