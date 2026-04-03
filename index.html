@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Andreas | Full Stack Software Engineer</title>
+    <meta name="description" content="Portofolio Andreas, Full Stack Software Engineer spesialis Web Modern & AI. Lihat pengalaman dan keahlian rekayasa perangkat lunak saya.">
+    <meta name="keywords" content="Andreas, Full Stack Engineer, Web Developer, Frontend, Backend, AI, Portofolio">
+    <meta name="author" content="Andreas">
+    
+    <meta property="og:title" content="Andreas | Full Stack Software Engineer">
+    <meta property="og:description" content="Membangun arsitektur web modern yang skalabel dan elegan.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:type" content="website">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- LIBRARIES: Lenis (Smooth Scroll) -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+
+    <link rel="stylesheet" href="global.css">
+</head>
+<body class="light-mode">
+    
+    <div id="loader"><div class="spinner"></div></div>
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+
+    <header class="top-header">
+        <div class="logo small-logo">Andreas.</div>
+        <div class="header-controls">
+            <button id="theme-toggle" class="magnetic-btn" title="Ganti Tema"><i class="fas fa-moon"></i></button>
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-btn active magnetic-btn" title="Beranda"><i class="fas fa-home"></i></a></li>
+            <li><a href="#about" class="nav-btn magnetic-btn" title="Tentang"><i class="fas fa-user"></i></a></li>
+            <li><a href="#skills" class="nav-btn magnetic-btn" title="Keahlian"><i class="fas fa-code"></i></a></li>
+            <li><a href="#projects" class="nav-btn magnetic-btn" title="Projek"><i class="fas fa-folder"></i></a></li>
+            <li><a href="#contact" class="nav-btn magnetic-btn" title="Kontak"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content" id="main-content">
+        <!-- HERO SECTION -->
+        <section id="home" class="hero section">
+            <div class="hero-text">
+                <span class="subtitle">ANDREAS</span>
+                <h1 class="hero-title">Full Stack Software Engineer</h1>
+                <p class="hero-desc">Hai! Saya Andreas, seorang Front-End Web Developer yang berfokus pada pengembangan antarmuka web modern menggunakan teknologi terkini. Saya membangun website yang tidak hanya terlihat menarik, tetapi juga optimal dari segi performa dan pengalaman pengguna.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary btn-landing magnetic-btn">Unduh CV</a>
+                    <a href="#contact" class="btn btn-outline btn-landing nav-trigger magnetic-btn">Hubungi Saya</a>
+                </div>
+            </div>
+            <div class="hero-img">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Foto Profil Andreas">
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about section text-center-mobile">
+            <div class="section-title">
+                <h2>Tentang Saya</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-brief-contentSR">
+                <p class="about-brief-text">Sebuah pengantar singkat tentang perjalanan saya sebagai Front-End Developer. Saya antusias mengubah ide menjadi tampilan web yang elegan, terstruktur, dan memberikan pengalaman yang menyenangkan bagi pengguna.</p>
+                <button id="open-full-about" class="btn btn-primary btn-landing magnetic-btn mt-15">
+                    <span>Lihat Selengkapnya</span> <i class="fas fa-arrow-up" style="margin-left: 8px; transform: rotate(45deg);"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="skills section">
+            <div class="section-title">
+                <h2>Keahlian Saya</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="skills-grid" id="skills-container"></div>
+        </section>
+
+        <!-- PROJECTS SECTION (P.A.R ARCHITECTURE) -->
+        <section id="projects" class="projects section text-center-mobile">
+            <div class="section-title">
+                <h2>Karya Terbaik</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="project-minimal">
+                <p class="about-brief-text">Studi Kasus Eksekutif: Merancang solusi untuk masalah dunia nyata dengan arsitektur perangkat lunak berkinerja tinggi.</p>
+                
+                <!-- P.A.R Case Study Card -->
+                <div class="par-card animate-on-scroll mt-20">
+                    <div class="par-header">
+                        <h3>Sistem Analitik Terpusat</h3>
+                        <span class="badge">SaaS Enterprise</span>
+                    </div>
+                    <div class="par-body">
+                        <p><strong>Problem:</strong> Entitas data pelanggan yang terfragmentasi menyebabkan lambatnya eksekusi keputusan bisnis.</p>
+                        <p><strong>Action:</strong> Merekayasa ulang pipeline data real-time menggunakan Node.js dan model prediktif RAG.</p>
+                        <p><strong>Result:</strong> Efisiensi query database melonjak 80% dan akurasi prediksi retensi mencapai 94%.</p>
+                    </div>
+                    <div class="tech-stack-row">
+                        <div class="tech-icon magnetic-btn" title="React.js untuk antarmuka dinamis"><i class="fab fa-react"></i></div>
+                        <div class="tech-icon magnetic-btn" title="Node.js untuk backend berkinerja tinggi"><i class="fab fa-node-js"></i></div>
+                        <div class="tech-icon magnetic-btn" title="Python untuk AI & Data Logic"><i class="fab fa-python"></i></div>
+                        <div class="tech-icon magnetic-btn" title="AWS untuk Infrastruktur Cloud"><i class="fab fa-aws"></i></div>
+                    </div>
+                </div>
+
+                <a href="project.html" class="btn btn-outline btn-landing magnetic-btn mt-20"><span>Lihat Arsip Projekku</span> <i class="fas fa-arrow-right" style="margin-left:8px;"></i></a>
+            </div>
+        </section>
+        
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact section text-center-mobile">
+            <div class="section-title">
+                <h2>Mari Terhubung</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-minimal">
+                <p class="about-brief-text">Tertarik untuk berkolaborasi atau sekadar menyapa? Kotak masuk saya terbuka. Baik Anda memiliki ide projek atau tawaran kerja, saya akan merespons secepat mungkin!</p>
+                <div class="social-links-row mt-20">
+                    <a href="mailto:dreastask@gmail.com" target="_blank" class="social-icon-btn magnetic-btn" title="Kirim Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/Another-Dreas" target="_blank" class="social-icon-btn magnetic-btn" title="GitHub Saya"><i class="fab fa-github"></i></a>
+                    <a href="https://instagram.com/dreasprb_" target="_blank" class="social-icon-btn magnetic-btn" title="Instagram Saya"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Andreas. All Rights Reserved.</p>
+            <div class="footer-pratama">- PRATAMA -</div>
+        </footer>
+    </main>
+
+    <!-- OVERLAY BOTTOM SHEET MODAL -->
+    <div id="full-about-page" class="bottom-sheet-modal" data-lenis-prevent>
+        <div class="full-page-header">
+            <div class="logo small-logo">Detail Profil.</div>
+            <button class="back-btn magnetic-btn" id="close-full-about">
+                <span>Tutup</span> <i class="fas fa-times" style="margin-left: 5px;"></i>
+            </button>
+        </div>
+
+        <div class="full-page-content">
+            <div class="who-am-i-container">
+                <div class="single-photo-featureSR">
+                    <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800&q=80" alt="Andreas" class="img-editorial-square overlay-grayscale" loading="lazy">
+                </div>
+
+                <div class="about-editorial-textSR fade-in-container">
+                    <h2 class="editorial-title animate-text-1">TENTANG SAYA</h2>
+                    <div class="underline animate-text-1" style="margin-bottom: 20px;"></div>
+                    <h3 class="name-highlight animate-text-2">Andreas </h3>
+                    <p class="animate-text-3">Front-End Web Developer dengan fokus pada pembuatan tampilan web yang modern, responsif, dan berorientasi pada pengalaman pengguna.</p>
+                    <p class="animate-text-4">Saya menggabungkan kode dan desain untuk menghasilkan antarmuka yang tidak hanya menarik, tetapi juga efisien dan nyaman digunakan.</p>
+                </div>
+            </div>
+
+            <div class="journey-sectionSR">
+                <h2 class="editorial-title text-center overlay-anim">Jejak Perjalanan</h2>
+                <div class="underline overlay-anim" style="margin: 5px auto 30px auto;"></div>
+                <div class="horizontal-carousel" id="timeline-container"></div>
+                <p class="swipe-hint overlay-anim"><i class="fas fa-arrows-alt-h"></i> <span>Geser untuk melihat riwayat</span></p>
+            </div>
+
+            <div class="overlay-quote-section" id="overlay-quote">
+                <div class="quote-content">
+                    <i class="fas fa-quote-left quote-icon-mark left-mark"></i>
+                    <p class="huge-quote-text" id="quote-container"></p>
+                    <i class="fas fa-quote-right quote-icon-mark right-mark"></i>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="overlay-footer">
+            <p>&copy; 2026 Andreas. All Rights Reserved.</p>
+            <div class="footer-pratama">- PRATAMA -</div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

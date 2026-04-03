@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Arsip Projek | Andreas</title>
+    <meta name="description" content="Kumpulan portofolio dan hasil karya rekayasa perangkat lunak oleh Andreas.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="project.css">
+</head>
+<body class="light-mode">
+    
+    <header class="top-header">
+        <a href="index.html" class="logo small-logo magnetic-btn" title="Kembali ke Beranda" style="display: flex; align-items: center; gap: 10px;">
+            <i class="fas fa-arrow-left" style="font-size: 1rem;"></i> Kembali
+        </a>
+        <div class="header-controls">
+            <button id="theme-toggle" class="magnetic-btn" title="Ganti Tema"><i class="fas fa-moon"></i></button>
+        </div>
+    </header>
+
+    <main class="main-content" id="main-content" style="padding-top: 120px; padding-bottom: 50px;">
+        
+        <section class="section text-center-mobile" style="padding-top: 0;">
+            <div class="section-title animate-on-scroll">
+                <h2>Arsip Projek</h2>
+                <div class="underline"></div>
+                <p class="about-brief-text mt-15">Kumpulan eksplorasi kode, aplikasi *mobile*, dan arsitektur *web* yang telah saya bangun.</p>
+            </div>
+
+            <div class="projects-archive-grid mt-20">
+                
+                <div class="par-card archive-card animate-on-scroll">
+                    <div class="archive-thumb">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="DreasNotes App">
+                    </div>
+                    <div class="archive-content">
+                        <div class="par-header">
+                            <h3>DreasNotes (Catatan Lagu)</h3>
+                            <span class="badge">Mobile App</span>
+                        </div>
+                        <div class="par-body">
+                            <p>Aplikasi mobile pengelolaan catatan lagu yang dirancang agar ringan dan efisien pada penggunaan RAM perangkat. Dilengkapi dengan penyimpanan lokal yang responsif.</p>
+                        </div>
+                        <div class="tech-stack-row">
+                            <div class="tech-icon magnetic-btn" title="Capacitor"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="tech-icon magnetic-btn" title="Vite"><i class="fas fa-bolt"></i></div>
+                            <div class="tech-icon magnetic-btn" title="SQLite"><i class="fas fa-database"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="par-card archive-card animate-on-scroll" style="transition-delay: 0.15s;">
+                    <div class="archive-thumb">
+                        <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Memories Web">
+                    </div>
+                    <div class="archive-content">
+                        <div class="par-header">
+                            <h3>Galeri Memori Terenkripsi</h3>
+                            <span class="badge">Web Personal</span>
+                        </div>
+                        <div class="par-body">
+                            <p>Website personal tertutup yang menggunakan sistem otentikasi aman berbasis cPanel. Menampilkan galeri foto dengan antarmuka yang sangat elegan dan interaktif.</p>
+                        </div>
+                        <div class="tech-stack-row">
+                            <div class="tech-icon magnetic-btn" title="PHP"><i class="fab fa-php"></i></div>
+                            <div class="tech-icon magnetic-btn" title="MySQL"><i class="fas fa-server"></i></div>
+                            <div class="tech-icon magnetic-btn" title="HTML & CSS"><i class="fab fa-css3-alt"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="par-card archive-card animate-on-scroll">
+                    <div class="archive-thumb">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Data Analytics">
+                    </div>
+                    <div class="archive-content">
+                        <div class="par-header">
+                            <h3>Sistem Analitik Terpusat</h3>
+                            <span class="badge">SaaS</span>
+                        </div>
+                        <div class="par-body">
+                            <p>Merekayasa pipeline data real-time untuk dasbor analitik bisnis. Mempercepat eksekusi data mentah menjadi wawasan bisnis visual yang siap pakai.</p>
+                        </div>
+                        <div class="tech-stack-row">
+                            <div class="tech-icon magnetic-btn" title="React.js"><i class="fab fa-react"></i></div>
+                            <div class="tech-icon magnetic-btn" title="Node.js"><i class="fab fa-node-js"></i></div>
+                            <div class="tech-icon magnetic-btn" title="AWS"><i class="fab fa-aws"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="par-card archive-card animate-on-scroll" style="transition-delay: 0.15s;">
+                    <div class="archive-thumb">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="E-Commerce Dashboard">
+                    </div>
+                    <div class="archive-content">
+                        <div class="par-header">
+                            <h3>E-Commerce Dashboard Admin</h3>
+                            <span class="badge">Web App</span>
+                        </div>
+                        <div class="par-body">
+                            <p>Antarmuka manajemen produk dan pesanan dengan konsep desain minimalis. Mendukung fitur grafik penjualan interaktif dan sistem inventaris *real-time*.</p>
+                        </div>
+                        <div class="tech-stack-row">
+                            <div class="tech-icon magnetic-btn" title="Next.js"><i class="fab fa-js"></i></div>
+                            <div class="tech-icon magnetic-btn" title="TailwindCSS"><i class="fab fa-css3"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="par-card archive-card animate-on-scroll">
+                    <div class="archive-thumb">
+                        <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="UI/UX Design">
+                    </div>
+                    <div class="archive-content">
+                        <div class="par-header">
+                            <h3>Smart Home Controller</h3>
+                            <span class="badge">IoT UI/UX</span>
+                        </div>
+                        <div class="par-body">
+                            <p>Eksplorasi antarmuka (UI/UX) untuk aplikasi pengontrol perangkat keras rumah pintar. Berfokus pada kemudahan akses, navigasi satu tangan, dan estetika gelap.</p>
+                        </div>
+                        <div class="tech-stack-row">
+                            <div class="tech-icon magnetic-btn" title="Figma"><i class="fab fa-figma"></i></div>
+                            <div class="tech-icon magnetic-btn" title="JavaScript"><i class="fab fa-js"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="par-card archive-card animate-on-scroll" style="transition-delay: 0.15s;">
+                    <div class="archive-thumb">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Learning Platform">
+                    </div>
+                    <div class="archive-content">
+                        <div class="par-header">
+                            <h3>Platform Edukasi Terbuka</h3>
+                            <span class="badge">Fullstack</span>
+                        </div>
+                        <div class="par-body">
+                            <p>Sistem manajemen pembelajaran dengan modul kuis dan forum diskusi. Dibangun dengan fokus pada optimasi pemuatan halaman yang cepat untuk koneksi internet lambat.</p>
+                        </div>
+                        <div class="tech-stack-row">
+                            <div class="tech-icon magnetic-btn" title="Vue.js"><i class="fab fa-vuejs"></i></div>
+                            <div class="tech-icon magnetic-btn" title="Laravel"><i class="fab fa-laravel"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer style="margin-top: 40px;">
+            <p>&copy; 2026 Andreas. All Rights Reserved.</p>
+            <div class="footer-pratama">- PRATAMA -</div>
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Lenis Smooth Scroll
+            const lenis = new Lenis({ duration: 1.2, smoothWheel: true });
+            function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+            requestAnimationFrame(raf);
+
+            // 2. Theme Toggle
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const body = document.body;
+            if (localStorage.getItem('theme') === 'dark') {
+                body.classList.replace('light-mode', 'dark-mode');
+                if (themeToggleBtn) themeToggleBtn.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+            }
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', () => {
+                    const themeIcon = themeToggleBtn.querySelector('i');
+                    if (body.classList.contains('light-mode')) {
+                        body.classList.replace('light-mode', 'dark-mode');
+                        themeIcon.classList.replace('fa-moon', 'fa-sun');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        body.classList.replace('dark-mode', 'light-mode');
+                        themeIcon.classList.replace('fa-sun', 'fa-moon');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+
+            // 3. Header Scrolled
+            const header = document.querySelector('.top-header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) header.classList.add('scrolled');
+                else header.classList.remove('scrolled');
+            });
+
+            // 4. Scroll Animation
+            const scrollObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add('show-anim');
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, { root: null, threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
+            document.querySelectorAll('.animate-on-scroll').forEach(el => scrollObserver.observe(el));
+
+            // 5. Magnetic Buttons
+            if(window.innerWidth > 992) {
+                document.querySelectorAll('.magnetic-btn').forEach(btn => {
+                    btn.addEventListener('mousemove', (e) => {
+                        const rect = btn.getBoundingClientRect();
+                        const x = e.clientX - rect.left - (rect.width / 2);
+                        const y = e.clientY - rect.top - (rect.height / 2);
+                        btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`; 
+                    });
+                    btn.addEventListener('mouseleave', () => { btn.style.transform = `translate(0px, 0px)`; });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
